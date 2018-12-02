@@ -40,9 +40,14 @@ app.factory("user", function($q, $http) {
         activeUser = null;
     }
 
+    function getActiveUser() {
+        return activeUser;
+    }
+
     return {
         login: login,
         isLoggedIn: isLoggedIn,
-        logout: logout
+        logout: logout,
+        getActiveUser: getActiveUser
     }
 })
