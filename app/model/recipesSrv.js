@@ -38,7 +38,27 @@ app.factory("recipes", function($q, $http, user) {
         return async.promise;
     }
 
+
+
+    function createRecipe(name, description, ingredients, steps, imgUrl) {
+        var async = $q.defer();
+
+        var newRecipe = new Recipe({id:-1, name: name, description: description,
+            ingredients: ingredients, steps: steps, imgUrl: imgUrl, 
+            userId: user.getActiveUser().id});
+
+        // if working with real server:
+        //$http.post("http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
+
+        recipes.push(newRecipe);
+        async.resolve(newRecipe);
+
+        return async.promise;
+    }
+
+
     return {
-        getActiveUserRecipes: getActiveUserRecipes
+        getActiveUserRecipes: getActiveUserRecipes,
+        createRecipe: createRecipe
     }
 })
