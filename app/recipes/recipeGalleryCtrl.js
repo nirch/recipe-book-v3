@@ -33,7 +33,7 @@ app.controller("recipeGalleryCtrl", function($scope) {
             ingredients: "Egg, Tomatto, Onion",
             steps: "Pout eggs and then tomatto",
             imgUrl: "http://www.spicechronicles.com/wp-content/uploads/2015/09/Shakshouka_1_650.jpg"
-        },
+        }
     ]
 
 })
