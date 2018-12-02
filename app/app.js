@@ -12,6 +12,7 @@ app.config(function($routeProvider) {
     }).when("/signup", {
 
     }).when("/recipes", {
+        templateUrl: "app/recipes/recipeGallery.html"
 
     }).when("/new" , {
 
