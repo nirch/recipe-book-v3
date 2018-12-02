@@ -15,7 +15,8 @@ app.config(function($routeProvider) {
         templateUrl: "app/recipes/recipeGallery.html",
         controller: "recipeGalleryCtrl"
     }).when("/new" , {
-
+        templateUrl: "app/recipes/newRecipe.html",
+        controller: "newRecipeCtrl"
     }).when("/recipe/:id" , {
 
     })
