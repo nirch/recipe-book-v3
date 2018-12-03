@@ -1,13 +1,14 @@
 
 app.factory("user", function($q, $http) {
 
-    var activeUser = new User( {
-        "id": 1,
-        "fname": "Nir",
-        "lname": "Channes",
-        "email": "nir@nir.com",
-        "pwd": "123"
-    });
+    var activeUser = null;
+    // new User( {
+    //     "id": 1,
+    //     "fname": "Nir",
+    //     "lname": "Channes",
+    //     "email": "nir@nir.com",
+    //     "pwd": "123"
+    // });
 
     function User(plainUser) {
         this.id = plainUser.id;
